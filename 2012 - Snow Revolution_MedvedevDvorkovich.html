@@ -13767,6 +13767,7 @@ endingPicker = (out, totv, aa, quickstats) => {
     if (player == 1001 && window.medvedevKilled) {
         playEndingMusic(7);
         setImage(endingImages[7]);
+        unlockAchievement("Cui Bono?");
         return `<h3 data-ending-number="7">ENDING 7: THE BLAST IN SAINT PETERSBURG: A NATION IN MOURNING, A KREMLIN RESTORED</h3>
         <p>The explosion tore through your motorcade on a gray afternoon in the city where Dmitry Medvedev was born, and by evening the news had reached every television in the country. Investigators spoke of a professional device and of rogue elements within the security services, then quietly stopped speaking of it at all. Within hours Vladimir Putin was acting president, appearing before the cameras in a black tie to promise that the guilty would be found.</p><p>The country mourned, and then it did what frightened countries do. The protest movement lost its candidate and its momentum in a single day, the crowds on Bolotnaya Square thinned, and no one remained who could stand in front of them. Putin won the election in a landslide, with the nation’s grief counted as his mandate. The inquiry never named anyone above the rank of colonel. Medvedev is remembered as the man who briefly promised Russia something else, and Moscow has learned not to ask who benefited.</p>`;
     }
@@ -13779,6 +13780,7 @@ endingPicker = (out, totv, aa, quickstats) => {
         if (winner == 1001 && !window.runoffOccurred) {
             playEndingMusic(1);
             setImage(endingImages[1]);
+            unlockAchievement("Four Legs Good, Two Legs Better");
 
 
 
@@ -13800,6 +13802,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 // ENDING 8: Serdyukov seizes power in Putin's name.
                 playEndingMusic(8);
                 setImage(endingImages[8]);
+                unlockAchievement("Please Stand By");
                 return `<h3 data-ending-number="8">ENDING 8: THE GENERALS’ MORNING: THE ARMY RETURNS PUTIN TO THE KREMLIN</h3>
                 <p>You won the runoff by the thinnest of margins, and you were certain that all of your worst fears were unfounded. They were not. Before dawn, tanks crossed the outer ring road, units of the Taman and Kantemir divisions took the television center, and the guards at your residence were replaced by men who would not meet your eyes. Serdyukov’s phone had gone silent, but his deputies were very busy.</p><p>By sunrise every channel was broadcasting Swan Lake, and every Russian over the age of forty understood what it meant. The generals announced a state of emergency to protect the country from disorder, and the Central Election Commission was told that its result was “under review.” They had no wish to rule in their own names. Within hours Putin appeared on screen, grave and unhurried, to accept the “request of the armed forces” to restore order. You are now confined to a dacha outside Moscow, Mr. President, though no one uses that title anymore. You won the election, and it did not matter in the slightest.</p>`;
             }
@@ -13809,6 +13812,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 // ENDING 2: Medvedev narrow second-round victory
                 playEndingMusic(2);
                 setImage(endingImages[2]);
+                unlockAchievement("Uneasy Lies the Head…");
 
 
 
@@ -13820,6 +13824,7 @@ endingPicker = (out, totv, aa, quickstats) => {
             // ENDING 3: Medvedev wide second-round victory
             playEndingMusic(3);
             setImage(endingImages[3]);
+            unlockAchievement("A New Hope");
 
             return `<h3 data-ending-number="3">ENDING 3: A MANDATE FOR MODERNIZATION: RUSSIA CHOOSES A NEW PATH</h3>
             <p>No one is calling this a narrow victory. The runoff turned into a referendum on Putin's return, and the country answered with a margin that even the Kremlin's loyal commentators cannot dismiss as a statistical accident. The coalition you assembled of urban voters, former protest-goers, and conservatives uneasy about another twelve years held firm through the second round, and Zyuganov's and Zhirinovsky's voters broke for you in numbers few had predicted.</p><p>You now hold something no Russian president has had in years: a genuine popular mandate to reform. Early Duma elections, the release of political prisoners, and a new relationship with the security services are all on the table. Putin has declined to comment. History has handed you a rare opening, Mr. President. Few leaders ever get a second chance to define their own presidency.</p>`;
@@ -13832,26 +13837,47 @@ endingPicker = (out, totv, aa, quickstats) => {
         else if (!window.runoffOccurred) {
             playEndingMusic(4);
             setImage(endingImages[4]);
+            unlockAchievement("Return of the King");
+
+
+
 
             return `<h3 data-ending-number="4">ENDING 4: PUTIN TAKES IT ALL, AND YOU TAKE THE BLAME</h3>
             <p>You should have known better. The governors delivered their numbers, the state television channels buried your campaign under ridicule, and the people who cheered you in December had vanished by March. The race was over before the runoff could even be scheduled, and Putin will take the oath in May as though the last four years were a loan he finally collected on. Those who stood beside you were remarkably quick to find other employment.</p><p>The liberals who flocked to you now call you a coward who broke too late. The loyalists call you a traitor who broke at all. Neither side has any use for you, and the offers of a quiet advisory post are the kind that are never really meant to be accepted. You gambled everything on a country that was not ready to be saved, and it let you fall without a second glance. History is rarely kind to a man who was handed the Kremlin and could not keep it, Dmitry Anatolyevich. It will be even less kind to you.</p>`;
         }
 
+
+
+
         // Medvedev loses the runoff
         else {
+
+
+
 
             if (isNarrowRunoff) {
                 // ENDING 5: Medvedev narrow second-round defeat
                 playEndingMusic(5);
                 setImage(endingImages[5]);
+                unlockAchievement("Do You Hear the People Sing?");
+
+
+
 
                 return `<h3 data-ending-number="5">ENDING 5: MOSCOW BURNS: PUTIN WINS BY A THREAD AS THE CITY ERUPTS</h3>
                 <p>The result was announced at midnight, and by one in the morning the crowds on Bolotnaya Square had become a mob. By dawn the streets around the Kremlin looked like a war zone, with tear gas drifting between the buildings, barricades burning on Tverskaya, and hospitals reporting hundreds of wounded. Footage of officers beating men on the ice spread faster than the state channels could suppress it.</p><p>You called for calm, and no one listened. Tent camps are rising in the squares, strikes are spreading through the provincial capitals, and several police units have reportedly refused orders. Prosecutors are already drawing up files with your name on them, while the opposition insists the election was stolen and the crowds have vowed not to leave until it is annulled. Kyiv, Tbilisi, and Belgrade all watched a disputed election turn into something larger, and no one in Moscow is certain this one has finished growing.</p>`;
             }
 
+
+
+
             // ENDING 6: Medvedev wide second-round defeat
             playEndingMusic(6);
             setImage(endingImages[6]);
+            unlockAchievement("It Was Never Your Seat");
+
+
+
 
             return `<h3 data-ending-number="6">ENDING 6: A CRUSHING DEFEAT, A SHAMEFUL END</h3>
             <p>It was not as close as you would have hoped. Putin won comfortably, and the commentators on state television spent the evening mocking the idea that you had ever been a serious challenger. The crowds that once chanted your name were nowhere to be found, and the few who remained were quickly dispersed by police who no longer bothered to hide their contempt. Within a week the protest leaders were in custody, the Duma was rushing through new laws to criminalize assembly, and every man you had ever promoted was giving interviews about how they had always doubted you.</p><p>You tried to be the reformer, and the country made a fool of you. The liberals will remember you as the man who lost their cause for them, and the loyalists will remember you as the one who betrayed the man who made him. No one will offer you a seat at any table again. You will leave the Kremlin as quietly as the system allows, in a car that no one is watching, to a life that has no place for you. You had one chance to change Russia, Dmitry Anatolyevich. All you changed was how little anyone will ever expect from you again.</p>`;
@@ -13859,12 +13885,18 @@ endingPicker = (out, totv, aa, quickstats) => {
     }
 };
 
+
+
+
 // ==========================================
 // 3. AUTO-CENTER & SCALE RUSSIA SVG MAP
 // ==========================================
 (function installMapAutoFit() {
     if (window.__russiaMapAutoFitInstalled) return;
     window.__russiaMapAutoFitInstalled = true;
+
+
+
 
 
     // ==========================================
@@ -13918,10 +13950,19 @@ endingPicker = (out, totv, aa, quickstats) => {
         const svg = document.querySelector("#map_container svg");
         if (!svg) return;
 
+
+
+
         const paths = svg.querySelectorAll("path");
         if (!paths.length) return;
 
+
+
+
         let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+
+
+
 
         paths.forEach(p => {
             try {
@@ -13935,11 +13976,17 @@ endingPicker = (out, totv, aa, quickstats) => {
             } catch (e) {}
         });
 
+
+
+
         if (isFinite(minX) && isFinite(minY)) {
             const width = maxX - minX;
             const height = maxY - minY;
             const padX = width * 0.03;  // 3% breathing room on left/right
             const padY = height * 0.04; // 4% breathing room on top/bottom
+
+
+
 
             svg.setAttribute(
                 "viewBox",
@@ -13953,18 +14000,33 @@ endingPicker = (out, totv, aa, quickstats) => {
         }
     }
 
+
+
+
     // Run immediately if the map is already open, and whenever NCT/CTS renders or updates #map_container
     fitRussiaMap();
     window.addEventListener("resize", fitRussiaMap);
+
+
+
 
     const observer = new MutationObserver(() => {
         fitRussiaMap();
     });
 
 
+
+
     const gameWindow = document.getElementById("game_window") || document.body;
     observer.observe(gameWindow, { childList: true, subtree: true });
 })();
+
+
+
+
+
+
+
 
 (function renameElectoralVoteLabels() {
     function updateLabels() {
@@ -13972,9 +14034,21 @@ endingPicker = (out, totv, aa, quickstats) => {
             document.body,
             NodeFilter.SHOW_TEXT
         );
+
+
+
+
         let node;
+
+
+
+
         while ((node = walker.nextNode())) {
             const original = node.nodeValue;
+
+
+
+
             const updated = original.replace(
                 /electoral votes/gi,
                 match =>
@@ -13982,6 +14056,10 @@ endingPicker = (out, totv, aa, quickstats) => {
                         ? "FEDERAL SUBJECTS"
                         : "Federal Subjects"
             );
+
+
+
+
             // Only modify the node if its text actually changed.
             if (updated !== original) {
                 node.nodeValue = updated;
@@ -13989,8 +14067,19 @@ endingPicker = (out, totv, aa, quickstats) => {
         }
     }
 
+
+
+
     updateLabels();
+
+
+
+
     const observer = new MutationObserver(updateLabels);
+
+
+
+
     observer.observe(document.body, {
         childList: true,
         characterData: true,
